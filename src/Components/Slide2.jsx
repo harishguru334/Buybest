@@ -32,7 +32,7 @@ function Slide2() {
         if (Data > 0) {
             setData(Data - 1);
         }
-        if (Data == 0) {
+        if (Data === 0) {
             setData(2)
         }
     }
@@ -41,7 +41,7 @@ function Slide2() {
         if (Data < 2) {
             setData(Data + 1);
         }
-        if (Data == 2) {
+        if (Data === 2) {
             setData(0)
         }
     }
@@ -49,10 +49,10 @@ function Slide2() {
         <>  <div className="Slider2">
             {imagesData && imagesData.map((item, i) => {
                 return (<>
-                    <div className={`${i == Data ? "active" : "none"}`}>
+                    <div className={`${i === Data ? "active" : "none"}`}>
                         <div className="containt2">
                             <img src={item.image} alt="" width={"100%"} height={"500px"} />
-                            <div className={`${i == 1 ? "cntnt-1" : "cntnt-2"} `}>
+                            <div className={`${i === 1 ? "cntnt-1" : "cntnt-2"} `}>
                                 <h2 className="style-1">{item.text1}</h2>
                                 <h2 className="style-2">{item.text2}</h2>
                                 <p>{item.text3}</p>
